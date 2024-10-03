@@ -27,6 +27,5 @@ public class Application {
 
         System.out.println("\nFiltered Flights:");
         filteredFlights.forEach(System.out::println);
-
     }
 }

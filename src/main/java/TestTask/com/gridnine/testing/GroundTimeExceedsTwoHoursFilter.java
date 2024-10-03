@@ -21,6 +21,5 @@ public class GroundTimeExceedsTwoHoursFilter implements FlightFilter {
                     return true;
                 })
                 .collect(Collectors.toList());
-
     }
 }

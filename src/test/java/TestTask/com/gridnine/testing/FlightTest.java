@@ -35,6 +35,5 @@ public class FlightTest {
         String expected = segments.stream().map(Object::toString)
                 .collect(Collectors.joining(" "));
         assertEquals(expected, flight.toString());
-
     }
 }
