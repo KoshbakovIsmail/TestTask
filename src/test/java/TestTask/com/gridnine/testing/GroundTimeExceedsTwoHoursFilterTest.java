@@ -16,5 +16,6 @@ public class GroundTimeExceedsTwoHoursFilterTest {
 
         // Ожидаем, что рейсы с временем на земле более двух часов будут исключены
         assertEquals(5, filteredFlights.size());
+
     }
 }

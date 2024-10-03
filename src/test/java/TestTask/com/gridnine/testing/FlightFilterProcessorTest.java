@@ -23,5 +23,6 @@ public class FlightFilterProcessorTest {
 
         // Ожидаем, что останутся только те рейсы, которые проходят все фильтры
         assertEquals(3, filteredFlights.size());
+
     }
 }

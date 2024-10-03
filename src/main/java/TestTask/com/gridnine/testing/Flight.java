@@ -21,5 +21,6 @@ class Flight {
     public String toString() {
         return segments.stream().map(Object::toString)
                 .collect(Collectors.joining(" "));
+
     }
 }

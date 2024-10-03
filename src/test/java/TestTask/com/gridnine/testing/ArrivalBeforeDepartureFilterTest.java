@@ -76,5 +76,6 @@ public class ArrivalBeforeDepartureFilterTest {
 
         // Ожидаем, что результат будет пустым
         assertEquals(0, filteredFlights.size());
+
     }
 }

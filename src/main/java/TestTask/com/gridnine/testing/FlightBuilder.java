@@ -40,5 +40,6 @@ class FlightBuilder {
             segments.add(new Segment(dates[i], dates[i + 1]));
         }
         return new Flight(segments);
+
     }
 }

@@ -28,5 +28,6 @@ public class FlightBuilderTest {
         LocalDateTime now = LocalDateTime.now();
         Flight flight = FlightBuilder.createFlight(now, now.plusHours(2), now.plusHours(3), now.plusHours(5));
         assertEquals(2, flight.getSegments().size());
+
     }
 }

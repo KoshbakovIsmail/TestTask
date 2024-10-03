@@ -46,5 +46,6 @@ public class SegmentTest {
         assertThrows(NullPointerException.class, () -> {
             new Segment(now, null);
         });
+
     }
 }
