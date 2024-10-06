@@ -10,10 +10,9 @@ public class FlightFilterProcessor {
     }
 
     public List<Flight> filter(List<Flight> flights) {
-        List<Flight> filteredFlights = flights;
         for (FlightFilter filter : filters) {
-            filteredFlights = filter.filter(filteredFlights);
+            flights = filter.filter(flights);
         }
-        return filteredFlights;
+        return flights;
     }
 }

@@ -5,20 +5,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class GroundTimeExceedsTwoHoursFilter implements FlightFilter {
+
     @Override
     public List<Flight> filter(List<Flight> flights) {
         return flights.stream()
                 .filter(flight -> {
                     List<Segment> segments = flight.getSegments();
+                    long totalGroundTime = 0;
+
                     for (int i = 0; i < segments.size() - 1; i++) {
                         Segment currentSegment = segments.get(i);
                         Segment nextSegment = segments.get(i + 1);
-                        Duration groundTime = Duration.between(currentSegment.getArrivalDate(), nextSegment.getDepartureDate());
-                        if (groundTime.toHours() > 2) {
-                            return false;
-                        }
+                        totalGroundTime += Duration.between(currentSegment.getArrivalDate(), nextSegment.getDepartureDate()).toMinutes();
                     }
-                    return true;
+
+                    return totalGroundTime <= 120; // 120 минут = 2 часа
                 })
                 .collect(Collectors.toList());
     }
