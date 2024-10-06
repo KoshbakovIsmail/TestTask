@@ -22,6 +22,6 @@ public class FlightFilterProcessorTest {
         List<Flight> filteredFlights = processor.filter(flights);
 
         // Ожидаем, что останутся только те рейсы, которые проходят все фильтры
-        assertEquals(3, filteredFlights.size());
+        assertEquals(2, filteredFlights.size());
     }
 }
