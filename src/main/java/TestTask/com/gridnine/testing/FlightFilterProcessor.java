@@ -15,6 +15,5 @@ public class FlightFilterProcessor {
             filteredFlights = filter.filter(filteredFlights);
         }
         return filteredFlights;
-
     }
 }

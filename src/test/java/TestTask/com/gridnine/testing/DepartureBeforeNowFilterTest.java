@@ -16,6 +16,5 @@ public class DepartureBeforeNowFilterTest {
 
         // Ожидаем, что рейсы с вылетом в прошлом будут исключены
         assertEquals(5, filteredFlights.size());
-
     }
 }
